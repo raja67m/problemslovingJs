@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Index</title>
+   <style>
+body{
+  background-color: black;
+  color:white;
+  align-items: center;
+}
+.counterCantainer{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.counterCantainer p{
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.counterCantainer button{
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+.counterCantainer #increament{
+  background-color: rgb(127, 204, 12);
+}
+.counterCantainer #decreament{
+  background-color: red;
+  
+}
+.counterCantainer #reset{
+  background-color: rgb(104, 89, 89);
+}
+   </style>
+</head>
+<body>
+  <div class="counterCantainer">
+    <p id="screen">0</p>
+    <button type="submit" id="increament">Increament</button>
+    <button type="submit" id="decreament">Decreament</button>
+    <button type="submit" id="reset">Reset</button>
+ </div>
+  
+
+   <script>
+ let count=0;
+ let screen=document.getElementById('screen');
+ let increament=document.getElementById('increament');
+ let decreament=document.getElementById('decreament');
+ let reset=document.getElementById('reset');
+
+ function inCreament(){
+ count++;
+screen.innerHTML=count;
+}
+function deCreament(){
+  count--;
+  screen.innerHTML=count;
+ 
+}
+function reSet(){
+  count='';
+  screen.innerHTML=count;
+}
+increament.addEventListener('click',inCreament);
+decreament.addEventListener('click',deCreament);
+reset.addEventListener('click',reSet);
+       
+   </script>
+
+</body>
+</html>
